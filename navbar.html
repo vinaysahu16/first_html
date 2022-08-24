@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HomePage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            *{
+                margin: 0%;
+                padding: 0%;
+            }
+            body{
+                
+                
+                background-size: cover;
+                background-size: 10 0%;
+            }
+            .header{
+                
+                width: 100%;
+                height: 8vh;
+                display: flex;
+                background-color:rgb(0, 0, 0);
+                position: sticky;
+            }
+            .name{
+                
+                display: flex;
+                flex: 0.5;
+                /* background-color: aquamarine; */
+                color: white;
+                align-items: center;
+                background-color: rgb(9, 169, 191);
+            }
+            .name h3{        
+                                             
+                font-weight: 600;
+                padding: 30px;
+                padding-left: 80px;
+                color: rgb(251, 253, 255);
+                                                                                                                                                                            
+            }                                                                                                   
+            .nav{
+                display: flex;
+                flex: 2;                                                                        
+                
+                align-items: center;
+                justify-content: space-around;
+                background-color: rgb(142, 140, 140);
+            }
+            .nav a{
+                font-weight: 1200;
+                color:white;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            .page
+            {
+                display: flex;
+                width: 30%;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .black{
+                
+                display: flex;
+                width: 100%;
+                height: 20vh;
+                background-color: black;
+                /* align-items: center; */
+                /* padding-left: 20%; */
+
+            }
+
+            .black h1{
+                color: white;
+                font-size: 79px;
+            }
+
+        </style>
+    </head>
+    <body >
+        
+        <div class="black">
+           <img src="./globbly.jpg">
+        </div>
+      <div class="header">
+       
+            <div class="name"><h3>HOME</h3></div>
+            <div class="nav">
+                <a href="#">ABOUT US</a>
+                <a href="#">SOLUTIONS</a>
+                <a href="#">SERVICES</a>
+                <a href="#">BLOG</a>
+                <a href="#">CONTACT US</a>
+            </div>
+           
+      </div>
+      
+      <!-- <img src="men.jpg" alt="Office_work" width="100%" height="100%"> -->
+      
+      <div class="slider-box">
+        <div id="slider">
+            <img src="images/img1.jpg" alt="">
+            <img src="images/img5.jpg" alt="">
+            <img src="images/img3.jpg" alt="">
+            <img src="images/img4.jpg" alt="">
+        </div>
+        <div class="indicators">
+            <span id="btn1" class="active"></span>
+            <span id="btn2"></span>
+            <span id="btn3"></span>
+            <span id="btn4"></span>
+        </div>
+    </div>
+
+   
+    <script>
+
+        var slide = document.getElementById("slider");
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        var btn4 = document.getElementById('btn4');
+
+        btn1.onclick = function () {
+            slide.style.transform = "translateX(0px)";
+            btn1.classList.add('active');
+            btn2.classList.remove('active');
+            btn3.classList.remove('active');
+            btn4.classList.remive('active');
+        };
+        btn2.onclick = function () {
+            slide.style.transform = "translateX(-100%)";
+            btn1.classList.remove('active');
+            btn2.classList.add('active');
+            btn3.classList.remove('active');
+            btn4.classList.remove('active');
+        };
+        btn3.onclick = function () {
+            slide.style.transform = "translateX(-200%)";
+            btn1.classList.remove('active');
+            btn2.classList.remove('active');
+            btn3.classList.add('active');
+            btn4.classList.remove('active');
+        };
+        btn4.onclick = function () {
+            slide.style.transform = "translateX(-300%)";
+            btn1.classList.remove('active');
+            btn2.classList.remove('active');
+            btn3.classList.remove('active');
+            btn4.classList.add('active');
+        };
+
+    </script>
+      
+      
+        
+    </body>
+</html>
